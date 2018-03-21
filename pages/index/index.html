@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../../utils/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../../utils/font/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../app.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+	</head>
+
+	<body>
+		<div id="app-index">
+
+			<!--顶部图片开始-->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6">
+						<img class="brid" src="../../assets/img/xiaoniao.png" />
+						<img class="xinque" src="../../assets/img/xinque.png" />
+					</div>
+					<div class="col-xs-6">
+						<h3 class="telphone fr">咨询电话:&nbsp;&nbsp;010-66666666</h3>
+					</div>
+				</div>
+			</div>
+			<!--顶部图片结束-->
+			<div class="top-nav" id="app">
+				<ul class="container">
+					<li class="top-nav-list">
+						<a href="../index/index.html">首页</a>
+					</li>
+					<li class="top-nav-list">
+						<a href="../list/list.html?listname=service" class="">服务项目</a>
+					</li>
+					<li class="top-nav-list">
+						<a href="../list/list.html?listname=news" class="">新闻中心</a>
+					</li>
+					<li class="top-nav-list">
+						<a href="../list/list.html?listname=health" class="">保健养生</a>
+					</li>
+					<li class="top-nav-list">
+						<a href="../info/info.html?info_id=coop" class="">合作伙伴</a>
+					</li>
+					<li class="top-nav-list">
+						<a href="../info/info.html?info_id=about" class="">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<!--轮播开始-->
+			<div class="container">
+				<div id="myCarousel" class="carousel slide">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					</ol>
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="../../assets/img/lunbo.png" alt="First slide">
+						</div>
+						<div class="item">
+							<img src="../../assets/img/lunbo2.png" alt="Second slide">
+						</div>
+						<div class="item">
+							<img src="../../assets/img/lunbo.png" alt="Third slide">
+						</div>
+						<div class="item">
+							<img src="../../assets/img/lunbo2.png" alt="Fourth slide">
+						</div>
+						<div class="item">
+							<img src="../../assets/img/lunbo.png" alt="Fifth slide">
+						</div>
+					</div>
+					<!-- 轮播（Carousel）导航 -->
+				</div>
+			</div>
+			<!--轮播结束-->
+			<!--新闻动态和关于我们开始-->
+			<div class="container" id="newsApp">
+				<div class="row">
+					<div class="col-xs-8">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="../list/list.html?listname=news">
+									<h3 class="panel-title">新闻动态</h3>
+								</a>
+								<a href="../list/list.html?listname=news">
+									<span class="gray fr">更多>></span>
+								</a>
+							</div>
+							<div class="panel-body app-panel-body">
+								<!--面板里边左边的图片-->
+								<div class="row">
+									<div class="col-xs-4">
+										<a href="../list/list.html?listname=news">
+											<img src="../../assets/img/panel.png" />
+										</a>
+									</div>
+									<div class="col-xs-8 app-8">
+										<div class="list" v-for="(item,index) in items">
+											<div class="list-head app-line">
+												<a :href='"../info/info.html?info_id="+item.info_id'>{{item.info_title}}</a>
+											</div>
+											<div class="list-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam laudantium fugiat magnam quis perferendis sed vero quae ab maiores ea amet dignissimos accusantium excepturi asperiores dicta. Officiis vitae quaerat quos?</div>
+											<div class="list-footer fr">{{item.add_time}}</div>
+										</div>
+										<!--<div class="list">
+											<div class="list-head app-line">
+												<a href="../info/info.html?info_id=about">咯咯咯咯咯过的点点滴滴多多多多多多多多多过过过过过过过过过过过</a>
+											</div>
+											<div class="list-footer fr">2017-20-20</div>
+										</div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="../info/info.html?info_id=about">
+									<h3 class="panel-title">关于我们</h3>
+								</a>
+							</div>
+							<div class="panel-body app-panel-body">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt cupiditate nam voluptas obcaecati temporibus sed beatae odit natus delectus explicabo ipsa eos eveniet. Ab ratione modi voluptatum pariatur! Consequatur pariatur!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--新闻动态和关于我们结束-->
+			<!--服务项目开始-->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="panel panel-default">
+							<a href="../info/info.html?listname=service">
+								<div class="panel-heading panel-green">
+									<span class="panel-title panel-center-title">服务项目</span>
+								</div>
+							</a>
+							<div class="panel-body app-panel-body-service">
+								<div class="row">
+									<div class="col-xs-3 app-col-xs-3">
+										<a href="../list/list.html?info_id=about">
+											<div class="server-img-test">
+												<img src="../../assets/img/index1.png" />
+												<span class="green">体检中心</span>
+											</div>
+										</a>
+										<ul>
+											<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+											<li>Nobis eaque dolorum facere ipsa repellat placeat delectus maxime est non ea magni tenetur provident</li>
+											<li>tempore pariatur laboriosam esse at! Quia suscipit</li>
+										</ul>
+									</div>
+									<div class="col-xs-3 app-col-xs-3">
+										<a href="../about/about.html?info_id=about">
+											<div class="server-img-test">
+												<img src="../../assets/img/index2.png" />
+												<span class="green">体检中心</span>
+											</div>
+										</a>
+										<ul>
+											<li>项目山东省单位和我对外担保没写么搜到的我我电脑</li>
+											<li>柴达木路费的买的吗买的吗的你的两份</li>
+											<li>精神可嘉是口口声声</li>
+										</ul>
+									</div>
+									<div class="col-xs-3 app-col-xs-3">
+										<a href="../about/about.html?info_id=about">
+											<div class="server-img-test">
+												<img src="../../assets/img/index3.png" />
+												<span class="green">体检中心</span>
+											</div>
+										</a>
+										<ul>
+											<li>ddd</li>
+											<li>ddd</li>
+											<li>ddd</li>
+										</ul>
+									</div>
+									<div class="col-xs-3 app-col-xs-3">
+										<a href="../about/about.html?info_id=about">
+											<div class="server-img-test">
+												<img src="../../assets/img/index4.png" />
+												<span class="green">体检中心</span>
+											</div>
+										</a>
+										<ul>
+											<li>ddd</li>
+											<li>ddd</li>
+											<li>ddd</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--服务项目结束-->
+			<!--保健养生开始-->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6">
+						<!--保健专题开始-->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="../list/list.html?listname=health">
+									<h3 class="panel-title">保健专题</h3>
+								</a>
+								<a href="../list/list.html?listname=health">
+									<span class="gray fr">更多>></span>
+								</a>
+							</div>
+							<div class="panel-body app-panel-body-health">
+								<div class="row">
+									<div class="col-xs-5">
+										<img src="../../assets/img/baojian.png" />
+									</div>
+									<div class="col-xs-7 app-7">
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">设计项目老师没说迷路了设计计算机技术技术试试</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus autem sint perferendis eligendi nisi natus cumque aliquam. Beatae delectus distinctio veritatis dolor ullam fuga velit blanditiis saepe labore quae consectetur!</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">空大空开导开导空空荡荡</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">男男女女女女女女女女女女耨所所所所所所所所所所所所所所</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">设计项目老师没说迷路了设计计算机技术技术试试</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--保健专题结束-->
+					</div>
+					<div class="col-xs-6">
+						<!--养生专题开始-->
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="../list/list.html?listname=health">
+									<h3 class="panel-title">养生专题</h3>
+								</a>
+								<a href="../list/list.html?listname=health">
+									<span class="gray fr">更多>></span>
+								</a>
+							</div>
+							<div class="panel-body app-panel-body-health">
+								<div class="row">
+									<div class="col-xs-5">
+										<img src="../../assets/img/baojian.png" />
+									</div>
+									<div class="col-xs-7 app-7">
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南sssssssssssssssssssssssssssssss的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+										<a href="../info/info.html?info_id=about">
+											<p class="app-line">记得记得济南的和和</p>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--养生专题结束-->
+					</div>
+				</div>
+			</div>
+			<!--保健养生结束-->
+
+			<!--底部开始-->
+			<div class="container-fluid app-bottom-nav">
+				<div class="row">
+					<div class="col-xs-7 app-bottom-7">
+						<p>版权所有&nbsp;2015-2017@上海信雀健康管理有限公司&nbsp;保留所有权利</p>
+						<p>沪ICP备15048359号</p>
+						<p>联系我们:400-131241414&nbsp;&nbsp;地址:上海市嘉定区悦城</p>
+					</div>
+					<div class="col-xs-5 app-bottom-5">
+						<img src="../../assets/img/erweima.png" />
+						<p>扫描二维码&nbsp;关注我们</p>
+					</div>
+				</div>
+			</div>
+			<!--底部结束-->
+		</div>
+		<script src="../../utils/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../utils/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
